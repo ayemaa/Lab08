@@ -14,8 +14,17 @@ public class CustomList {
         cities.add(city);
     }
 
-    
-
+    public class CustomListTest {
+        @Test
+        public void testHasCity() {
+            CustomList list = new CustomList();
+            City calgary = new City("Calgary", "AB");
+            list.addCity(calgary);
+            // This will fail initially because hasCity() doesn't
+            exist
+            assertTrue(list.hasCity(calgary));
+        }
+    }
     // Will be implemented later using TDD (leave blank for now)
     // public boolean hasCity(City city) { ... }
 }
