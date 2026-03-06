@@ -8,22 +8,14 @@ public class CustomList {
 
     public CustomList() {
         this.cities = new ArrayList<>();
+
     }
 
     public void addCity(City city) {
         cities.add(city);
     }
-
-    public class CustomListTest {
-        @Test
-        public void testHasCity() {
-            CustomList list = new CustomList();
-            City calgary = new City("Calgary", "AB");
-            list.addCity(calgary);
-            // This will fail initially because hasCity() doesn't
-            exist
-            assertTrue(list.hasCity(calgary));
-        }
+    public boolean hasCity(City city) {
+        return cities.contains(city);
     }
     // Will be implemented later using TDD (leave blank for now)
     // public boolean hasCity(City city) { ... }
